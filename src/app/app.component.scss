@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Varela Round";
+    src: local("Varela Round"), url(../assets/fonts/Varela_Round/VarelaRound-Regular.ttf) format("truetype");
+}
+
+
+
+
+
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+
+.top-line {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #FC5C9C;
+    margin: 0;
+    height: 8px;
+}
+
+.menu {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr 6fr 1fr;
+    background: white;
+    text-decoration: none;
+    width: 100vw;
+    padding-left: 0;
+    font-family: Varela Round;
+    height: 10vh;
+    align-items: center;
+}
+
+
+
+.menu{
+    background-image: linear-gradient(to right, white 0%, white 5%, rgb(56, 55, 55) 5%, rgb(56, 55, 55) 45%, white 45%, white 55%, rgb(56, 55, 55) 55%, rgb(56, 55, 55) 95%, white 95%, white 100%);
+    background-size: 100% 1px; 
+    background-repeat: no-repeat;
+    background-position: 0 100%; 
+    background-clip: content-box; 
+
+    transition:  background-image 20s;
+
+ 
+}
+
+.menu-down{
+    background-image: linear-gradient(to right, rgb(241, 240, 240) 0%, rgb(241, 240, 240) 100%);
+    background-size: 100% 1px; 
+    background-repeat: no-repeat;
+    background-position: 0 100%; 
+    background-clip: content-box; 
+
+    transition:  background-image 20s;
+
+   border-bottom: 0.5px solid rgb(241, 240, 240);
+  
+    .mid-side-menu {
+        height: 8vh;
+        position: absolute;
+        top: 2vh;
+        transition:  height 8s, top 8s;
+    }
+
+}
+
+.left-side-menu-wrapper,
+.right-side-menu-wrapper,
+.mid-side-menu-wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+   
+}
+
+
+.mid-side-menu-up {
+    height: 11vh;
+    position: absolute;
+    top: 5vh;
+    transition:  height 2s, top 2s;
+}
+
+.mid-side-menu-down {
+    height: 8vh;
+    position: absolute;
+    top: 2vh;
+    transition:  height 8s, top 8s;
+}
+
+
+
+
+.left-side-menu,
+.right-side-menu {
+    font-size: 1rem;
+    font-family: Varela Round;
+    display: grid;
+    justify-content: center;
+    direction: rtl;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+}
+
+.right-side-menu {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 10px;
+}
+
+
+
+hr {
+    border: none;
+    height: 0.5px;
+    margin: 0;
+    font-weight: 100;
+    color: black;
+    background: black;
+    width: 85%;
+}
+
+.about-section {
+    background-image: url('../assets/candy-background.svg');
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    background-size: 210vh;
+    height: 100vh;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+

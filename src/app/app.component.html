@@ -1,0 +1,71 @@
+<app-confetti *ngIf="isLoadingPage; else about_page"></app-confetti>
+<ng-template #about_page>
+  <div class="menu-wrapper">
+    <div class="top-line"></div>
+
+
+    <menu class="menu" (scroll)="onScroll($event)" ngModel #menuRef>
+      <div>.</div>
+      <div class="left-side-menu-wrapper">
+        <div class="left-side-menu">
+          <div>ליצירת קשר: 052-6530614</div>
+        </div>
+      </div>
+      <div class="mid-side-menu-wrapper">
+
+        <img src="../assets/logo/round/dream-cakes-low-resolution-logo-color-on-transparent-background1.svg" class="mid-side-menu-up" *ngIf="isMenuUp; else menu_down">
+      
+          <!-- <img src="../assets/logo/dream-cakes-website-favicon-color.svg" class="mid-side-menu-up"
+            *ngIf="isMenuUp; else menu_down" data-aos="fade-down" data-aos-duration="300" data-aos-offset="0" data-aos-anchor-placement="top-center"> -->
+
+        <ng-template #menu_down>
+            <img src="../assets/logo/round/dream-cakes-low-resolution-logo-color-on-transparent-background1.svg" class="mid-side-menu-down"
+              data-aos="fade-up" data-aos-duration="300" data-aos-offset="0" data-aos-anchor-placement="top-center">
+
+        </ng-template>
+      </div>
+
+
+      <div class="right-side-menu-wrapper">
+        <div class="right-side-menu">
+          <a routerLink="/" fragment="about">עלינו</a>
+          <a routerLink="/" fragment="second">עוגות</a>
+          <a routerLink="/" fragment="third">הסוד שלי</a>
+          <a routerLink="/" fragment="contact"> צור קשר </a>
+        </div>
+      </div>
+      <div>.</div>
+    </menu>
+  </div>
+
+
+
+
+
+  <section id="about" class="about-section" (scroll)="onScroll($event)">
+    <app-about></app-about> 
+
+
+
+  </section>
+
+  <section id="second" style="height:100vh;background-color: #FCEFEE;">
+    Content...2
+  </section>
+
+  <section id="third" style="height:100vh;background-color: rgb(0, 255, 42);">
+    Content...3
+  </section>
+
+  <section id="contact" style="height:100vh;background-color: rgb(17, 0, 255);">
+    Content...3
+  </section>
+
+</ng-template>
+
+
+
+
+
+
+<!-- <img src="../assets/logo/dream-cakes-website-favicon-color.svg" class="mid-side-menu-up" data-aos="fade-up" data-aos-duration="3000"> -->

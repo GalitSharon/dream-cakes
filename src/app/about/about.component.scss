@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Varela Round";
+    src: local("Varela Round"), url(../../assets/fonts/Varela_Round/VarelaRound-Regular.ttf) format("truetype");
+}
+
+:host {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    width: 60vw;
+    // border: 5px solid red;
+
+
+    .logo-name-wrapper {
+        width: 30vw;
+        direction: rtl;
+        padding-top: 5vh;
+
+        .logo-name {
+            width: 100%;
+        }
+
+        .description-wrapper {
+            font-family: Varela Round;
+            align-self: start;
+            margin-top: 3vh;
+            direction: rtl;
+            background-color: white;
+            
+            // padding: 0 0 10px 10px;
+           
+
+            .description-title {
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 32px;
+                color: #282828;
+            }
+
+            .description {
+                font-weight: 400;
+                font-size: 13px;
+                color: #282828;
+                
+                
+            }
+        }
+
+      
+    }
+
+
+
+
+    .about-pic-wrapper {
+        display: grid;
+        .about-main-pic {
+        
+            width: 28vw;
+           align-self: center;
+        }
+    }
+
+  
+
+
+
+}
