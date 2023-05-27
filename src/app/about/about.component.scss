@@ -15,8 +15,6 @@
     grid-template-columns: 1fr 1fr;
     height: 60vh;
     width: 60vw;
-    // border: 5px solid red;
-
 
     .logo-name-wrapper {
         width: 30vw;
@@ -33,27 +31,20 @@
             margin-top: 3vh;
             direction: rtl;
             background-color: white;
-            
-            // padding: 0 0 10px 10px;
-           
 
             .description-title {
                 font-weight: 700;
                 font-size: 25px;
                 line-height: 32px;
-                color: #282828;
+                color: rgb(73, 72, 72);
             }
 
             .description {
                 font-weight: 400;
                 font-size: 13px;
-                color: #282828;
-                
-                
+                color: rgb(73, 72, 72);
             }
         }
-
-      
     }
 
 
@@ -61,15 +52,12 @@
 
     .about-pic-wrapper {
         display: grid;
+
         .about-main-pic {
-        
+
             width: 28vw;
-           align-self: center;
+            align-self: center;
         }
     }
-
-  
-
-
 
 }

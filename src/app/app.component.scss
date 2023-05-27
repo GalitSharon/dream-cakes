@@ -4,9 +4,6 @@
 }
 
 
-
-
-
 .menu-wrapper {
     position: fixed;
     top: 0;
@@ -35,38 +32,30 @@
     align-items: center;
 }
 
-
-
-.menu{
-    background-image: linear-gradient(to right, white 0%, white 5%, rgb(56, 55, 55) 5%, rgb(56, 55, 55) 45%, white 45%, white 55%, rgb(56, 55, 55) 55%, rgb(56, 55, 55) 95%, white 95%, white 100%);
-    background-size: 100% 1px; 
+.menu {
+    background-image: linear-gradient(to right, white 0%, white 5%, rgb(73, 72, 72) 5%, rgb(73, 72, 72) 45%, white 45%, white 55%, rgb(73, 72, 72) 55%, rgb(73, 72, 72) 95%, white 95%, white 100%);
+    background-size: 100% 1px;
     background-repeat: no-repeat;
-    background-position: 0 100%; 
-    background-clip: content-box; 
-
-    transition:  background-image 20s;
-
- 
+    background-position: 0 100%;
+    background-clip: content-box;
+    transition: background-image 20s;
 }
 
-.menu-down{
+.menu-down {
     background-image: linear-gradient(to right, rgb(241, 240, 240) 0%, rgb(241, 240, 240) 100%);
-    background-size: 100% 1px; 
+    background-size: 100% 1px;
     background-repeat: no-repeat;
-    background-position: 0 100%; 
-    background-clip: content-box; 
+    background-position: 0 100%;
+    background-clip: content-box;
+    transition: background-image 20s;
+    border-bottom: 0.5px solid rgb(241, 240, 240);
 
-    transition:  background-image 20s;
-
-   border-bottom: 0.5px solid rgb(241, 240, 240);
-  
     .mid-side-menu {
         height: 8vh;
         position: absolute;
         top: 2vh;
-        transition:  height 8s, top 8s;
+        transition: height 8s, top 8s;
     }
-
 }
 
 .left-side-menu-wrapper,
@@ -76,7 +65,6 @@
     justify-items: center;
     align-items: center;
     align-content: center;
-   
 }
 
 
@@ -84,18 +72,15 @@
     height: 11vh;
     position: absolute;
     top: 5vh;
-    transition:  height 2s, top 2s;
+    transition: height 2s, top 2s;
 }
 
 .mid-side-menu-down {
     height: 8vh;
     position: absolute;
     top: 2vh;
-    transition:  height 8s, top 8s;
+    transition: height 8s, top 8s;
 }
-
-
-
 
 .left-side-menu,
 .right-side-menu {
@@ -106,11 +91,28 @@
     direction: rtl;
 
     a {
-        color: black;
+        color: rgb(73, 72, 72);
         text-decoration: none;
     }
-
 }
+
+.left-side-menu {
+    display: flex;
+    color: rgb(73, 72, 72);
+
+    .bullet {
+        border-radius: 20px;
+        width: 6px;
+        height: 6px;
+        background-color: #FC5C9C;
+        justify-self: center;
+        align-self: center;
+        margin-top: 2px;
+        margin: 2px 0 0 5px;
+    }
+}
+
+
 
 .right-side-menu {
     grid-template-columns: repeat(4, 1fr);
@@ -134,12 +136,11 @@ hr {
     background-image: url('../assets/candy-background.svg');
     background-repeat: repeat-x;
     background-position-y: bottom;
-    background-size: 210vh;
+    background-size: 150vh;
     height: 100vh;
 }
 
 .fade-out {
     opacity: 0;
     transition: opacity 0.3s ease-out;
-  }
-
+}
