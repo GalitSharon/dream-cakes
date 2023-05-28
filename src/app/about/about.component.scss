@@ -13,16 +13,16 @@
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 60vh;
-    width: 60vw;
+    height: 57vh;
+    width: 64vw;
 
     .logo-name-wrapper {
-        width: 30vw;
+        width: 32vw;
         direction: rtl;
         padding-top: 5vh;
 
         .logo-name {
-            width: 100%;
+            width: 94%;
         }
 
         .description-wrapper {
@@ -30,34 +30,49 @@
             align-self: start;
             margin-top: 3vh;
             direction: rtl;
-            background-color: white;
+            // background-color: white;
+            color:  #0a1b25;
 
             .description-title {
                 font-weight: 700;
                 font-size: 25px;
                 line-height: 32px;
-                color: rgb(73, 72, 72);
             }
 
             .description {
                 font-weight: 400;
                 font-size: 13px;
-                color: rgb(73, 72, 72);
             }
         }
     }
 
-
-
-
     .about-pic-wrapper {
         display: grid;
+        justify-content: right;
 
         .about-main-pic {
 
-            width: 28vw;
+            width: 30vw;
+            background-image: url('../../assets/clouds/cloud-removebg-preview.png');
+            background-repeat: no-repeat;
+            background-size: 90vh;
+            border-right: 4px solid #FFA1C6;
             align-self: center;
         }
     }
 
+}
+
+.left-cloud {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: 30vh;
+}
+
+.right-cloud {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: 30vh;
 }
