@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Varela Round";
+    src: local("Varela Round"), url(../../../assets/fonts/Varela_Round/VarelaRound-Regular.ttf) format("truetype");
+}
+
+.sub-menu-container {
+    width: 100vw;
+    height: 30vh;
+    background-color: white;
+    color: black;
+    border-bottom: 0.5px solid rgb(241, 240, 240);
+    display: grid;
+    justify-items: center;
+    font-family: Varela Round;
+}
+
+.sub-menu-wrapper {
+    width: 70vw;
+    max-height: 36vh;
+    display: grid;
+    grid-template-columns: 6fr 2fr 6fr;
+    align-items: center;
+}
+
+.categories {
+    max-height: 36vh;
+    display: grid;
+    padding-top: 3vh;
+}
+
+.pictures {}
+
+.event-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.event {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    direction: rtl;
+}
+
+
+.category-title {
+    font-weight: 700;
+    font-size: 1.3vw;
+    margin-bottom: 20vh;
+}
+
+.category-title:hover,
+.option:hover {
+    color: #C5E3F6;
+}
+
+.event-options {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.option {
+    cursor: pointer;
+}

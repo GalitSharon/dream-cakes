@@ -1,28 +1,49 @@
-<div class="menu-wrapper">
+<div class="menu-container">
   <div class="top-line"></div>
-  <menu class="menu" ngModel #menuRef>
-    <div>.</div>
-    <div class="left-side-menu-wrapper">
-      <ul class="left-side-menu" role="left-menu">
-        <li class="menu-item">מיוחדים</li>
-      </ul>
-    </div>
-    <div class="mid-side-menu-wrapper">
-      <img src="assets/logo/round/dream-cakes-low-resolution-logo-color-on-transparent-background1.svg"
-        class="mid-side-menu-up" *ngIf="isMenuUp; else menu_down">
-      <ng-template #menu_down>
-        <img src="assets/logo/round/dream-cakes-low-resolution-logo-color-on-transparent-background1.svg"
-          class="mid-side-menu-down" data-aos="fade-up" data-aos-duration="300" data-aos-offset="0"
-          data-aos-anchor-placement="top-center">
-      </ng-template>
-    </div>
-    <div class="right-side-menu-wrapper">
-      <div class="right-side-menu">
-        <a routerLink="/" fragment="about">עלינו</a>
-        <a routerLink="/" fragment="second">טופס להזמנה</a>
-        <a routerLink="/" fragment="contact"> צור קשר </a>
+  <div class="menu-wrapper">
+    <menu class="menu" ngModel #menuRef>
+      <div class="left-side-menu">
+        <span class="menu-item" (mouseenter)="onMenuItemSelect('byEvent')" (mouseleave)="onMenuItemLeave('byEvent')">
+          <span ngModel #eventsCaret>
+            <span class="material-symbols-outlined"> expand_more</span>
+          </span>
+          <span class="menu-item-title">לפי אירוע</span>
+        </span>
+        <span class="menu-item" (mouseenter)="onMenuItemSelect('byStyle')" (mouseleave)="onMenuItemLeave('byStyle')">
+          <span ngModel #styleCaret>
+            <span class="material-symbols-outlined"> expand_more</span>
+          </span>
+          <span class="menu-item-title">לפי סגנון</span>
+        </span>
+        <span class="menu-item" (mouseenter)="onMenuItemSelect('byTheme')" (mouseleave)="onMenuItemLeave('byTheme')">
+          <div ngModel #themeCaret>
+            <span class="material-symbols-outlined"> expand_more</span>
+          </div>
+          <span class="menu-item-title">לפי נושא</span>
+        </span>
+        <span class="menu-item" (mouseenter)="onMenuItemSelect('specials')" (mouseleave)="onMenuItemLeave('specials')">
+          <span ngModel #specialsCaret>
+            <span class="material-symbols-outlined">expand_more</span>
+          </span>
+          <span class="menu-item-title">מיוחדים</span>
+        </span>
       </div>
-    </div>
-    <div>.</div>
-  </menu>
+      <div class="mid-side-menu-wrapper">
+        <img src="assets/logo/round/dream-cakes-high-resolution-logo-color-on-transparent-background (1).svg"
+          class="mid-side-menu-up" *ngIf="isMenuUp; else menu_down">
+        <ng-template #menu_down>
+          <img src="../../assets/logo/round/dream-cakes-high-resolution-logo-color-on-transparent-background (1).svg"
+            class="mid-side-menu-down" data-aos="fade-up" data-aos-duration="300" data-aos-offset="0"
+            data-aos-anchor-placement="top-center">
+        </ng-template>
+      </div>
+      <div class="right-side-menu" (mouseenter)="onMenuHover()">
+        <a routerLink="/" fragment="contact" class="menu-item"> צור קשר </a>
+        <a routerLink="/" fragment="second" class="menu-item">טופס להזמנה</a>
+        <a routerLink="/" fragment="about" class="menu-item">עלינו</a>
+      </div>
+    </menu>
+  </div>
+  <app-sub-menu *ngIf="isMenuOpen" [menuSelection]="menuSelection" class="sub-menu"
+    (mouseleave)="onMenuLeave()"></app-sub-menu>
 </div>

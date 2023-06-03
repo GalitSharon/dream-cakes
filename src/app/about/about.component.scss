@@ -56,7 +56,7 @@
             background-image: url('../../assets/clouds/cloud-removebg-preview.png');
             background-repeat: no-repeat;
             background-size: 90vh;
-            border-right: 4px solid #FFA1C6;
+            // border-right: 4px solid #FFA1C6;
             align-self: center;
         }
     }
@@ -68,11 +68,13 @@
     top: 10vh;
     left: 0;
     height: 30vh;
+    opacity: 0.8;
 }
 
 .right-cloud {
     position: absolute;
-    top: 10vh;
-    left: 0;
-    height: 30vh;
+    top: 12vh;
+    left: 85%;
+    height: 25vh;
+    opacity: 0.8;
 }

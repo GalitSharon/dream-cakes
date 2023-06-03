@@ -9,10 +9,12 @@
 }
 
 
-.menu-wrapper {
+.menu-container {
     position: fixed;
     top: 0;
     margin: 0;
+    height: 50vh;
+    font-size: 0.8vw;
 }
 
 .top-line {
@@ -24,20 +26,26 @@
     height: 8px;
 }
 
+.menu-wrapper {
+    display: grid;
+    background-color: white;
+    justify-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
 .menu {
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr 6fr 1fr;
+    grid-template-columns: 6fr 2fr 6fr;
     background: white;
     text-decoration: none;
-    width: 100vw;
+    width: 70vw;
     padding-left: 0;
     font-family: Varela Round;
     height: 10vh;
     align-items: center;
-}
 
-.menu {
     background-image: linear-gradient(to right, white 0%, white 5%, rgb(241, 240, 240) 5%, rgb(241, 240, 240) 45%, white 45%, white 55%, rgb(241, 240, 240) 55%, rgb(241, 240, 240) 95%, white 95%, white 100%);
     background-size: 100% 1px;
     background-repeat: no-repeat;
@@ -47,13 +55,7 @@
 }
 
 .menu-down {
-    background-image: linear-gra    dient(to right, rgb(241, 240, 240) 0%, rgb(241, 240, 240) 100%);
-    background-size: 100% 1px;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-clip: content-box;
-    transition: background-image 20s;
-    border-bottom: 0.5px solid rgb(241, 240, 240);
+    background-image: linear-gradient(to right, rgb(241, 240, 240) 0%, rgb(241, 240, 240) 100%);
 
     .mid-side-menu {
         height: 8vh;
@@ -63,79 +65,82 @@
     }
 }
 
-.left-side-menu-wrapper,
-.right-side-menu-wrapper,
-.mid-side-menu-wrapper {
-    display: grid;
+.menu-open {
+    background-image: linear-gradient(to right, white 0%, white 100%);
+    border: none;
+    transition: background-image 1s, border 1s;
+    z-index: 1000;
+}
+
+.left-side-menu,
+.right-side-menu
+ {
+    display: flex;
     justify-items: center;
     align-items: center;
     align-content: center;
+    height: 100%;
 }
 
+.left-side-menu {
+    justify-content: space-evenly;
+}
+
+.right-side-menu {
+    justify-content: end;
+
+}
+
+.mid-side-menu-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 .mid-side-menu-up {
     height: 11vh;
-    position: absolute;
+    position: relative;
     top: 5vh;
     transition: height 2s, top 2s;
 }
 
 .mid-side-menu-down {
-    height: 8vh;
-    position: absolute;
-    top: 2vh;
+    height: 7vh;
     transition: height 8s, top 8s;
+    justify-self: center;
+    align-self: center;
 }
 
-.left-side-menu,
-.right-side-menu {
-    font-size: 1rem;
-    font-family: Varela Round;
-    display: grid;
-    justify-content: center;
-    direction: rtl;
-
-    a {
-        color: rgb(73, 72, 72);
-        text-decoration: none;
-    }
-}
-
-.left-side-menu {
+.menu-item {
+    cursor: pointer;
     display: flex;
-    color: rgb(73, 72, 72);
-
-    .menu-item {
-        ::before {
-            color: red;
-            font-size: 20px;
-        }
-
-        a:after{
-            content: '';
-            border: 4px solid transparent;
-            border-top: 4px solid white;
-            margin-left: 2px;
-            margin-bottom: 3px;
-            display: inline-block;
-            vertical-align: bottom;
-        }
-
-        li.has_child:after {  
-            content: '';   
-            position: absolute;   
-            border: 7px solid transparent; 
-            /* This will set the direction of the arrow.*/  
-             border-top: 7px solid white; 
-               top: 34px; 
-            margin-left: 5px; 
-    
-      } 
-    }
+    height: 100%;
+    align-items: center;
+    color: black;
+    text-decoration: none;
 }
 
-.right-side-menu {
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    column-gap: 10px;
+
+.menu-item-title:hover {
+    color: #C5E3F6;
+}
+
+
+.material-symbols-outlined {
+    cursor: pointer;
+    color: black;
+    position: relative;
+    top: 3px;
+    font-size: 26px;
+}
+
+.material-symbols-outlined:hover {
+    color:
+        #C5E3F6;
+}
+
+.material-symbols-outlined-hovered {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: transform 150ms;
 }

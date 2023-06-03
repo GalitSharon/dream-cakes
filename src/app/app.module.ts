@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MenuComponent } from './menu/menu.component';
 import { AppService } from 'src/services/app.service';
+import { SubMenuComponent } from './menu/sub-menu/sub-menu.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppService } from 'src/services/app.service';
     AboutComponent,
     ProductsComponent,
     MenuComponent,
+    SubMenuComponent,
   ],
   imports: [
     CommonModule,

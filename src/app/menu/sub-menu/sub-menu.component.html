@@ -1,0 +1,44 @@
+<div class="sub-menu-container">
+   <div class="sub-menu-wrapper">
+      <div class="categories">
+         <div *ngIf="menuSelection === 'byEvent'" class="event-wrapper">
+            <div class="event">
+               <div class="category-title">יום הולדת</div>
+               <div class="event-options">
+                  <div class="option">יום הולדת לבת</div>
+                  <div class="option">יום הולדת לבן</div>
+                  <div class="option">יום הולדת ילדים</div>
+                  <div class="option">יום הולדת מבוגרים</div>
+               </div>
+            </div>
+            <div class="event">
+               <div class="category-title">חתונה</div>
+               <div class="event-options">
+                  <div class="option">עוגת קומה</div>
+                  <div class="option">עוגת שתי קומות</div>
+                  <div class="option">עוגת שלוש קומות</div>
+                  <div class="option">מיוחדים</div>
+               </div>
+            </div>
+            <div class="event">
+               <div class="category-title">בן/בת</div>
+               <div class="event-options">
+                  <div class="option">עוגת גילוי בן/בת</div>
+               </div>
+            </div>
+            <div class="event">
+               <div class="category-title">רווקות</div>
+               <div class="event-options">
+                  <div class="option">עוגת כלה</div>
+                  <div class="option">עוגת בוקה</div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="menuSelection === 'byStyle'" class="event-wrapper">לפי סגנון</div>
+         <div *ngIf="menuSelection === 'byTheme'" class="event-wrapper">לפי נושא</div>
+         <div *ngIf="menuSelection === 'specials'" class="event-wrapper"></div>
+      </div>
+      <div class="mid"></div>
+      <div class="pictures"></div>
+   </div>
+</div>

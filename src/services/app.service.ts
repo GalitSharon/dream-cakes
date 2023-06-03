@@ -6,6 +6,7 @@ import { WindowRefService } from './window-ref.service';
 })
 export class AppService {
   isMenuUp = true;
+  
   constructor(public winRef: WindowRefService) { }
 
   updateMenuLocation(isUp: boolean) {

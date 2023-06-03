@@ -1,0 +1,1 @@
+export type menuSelections = "specials" | "byEvent" | "byStyle" | "byTheme";

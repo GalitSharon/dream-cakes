@@ -9,15 +9,12 @@
 }
 
 
-
-
 .about-section {
-  
     height: 100vh;  
-    // background-image: url('../assets/candy-background.svg');
-    // background-repeat: no-repeat;
-    // background-position-x: right;
-    // background-size: 120vh;
+    background-image: url('../assets/candy-background.svg');
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    background-size: 200vh;
 }
 
 .fade-out {
